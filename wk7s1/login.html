@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Login</h1>
+      <fieldset>
+        <!-- required: makes the field mandatory -->
+         <!-- maxlength = limits the no of charactrs -->
+          <!-- size = specifies the visible width of the field -->
+           <!-- readonly = prevents editing the field -->
+            <!-- disabled = disables the input field -->
+        <legend>Login Details</legend>
+        <label for="username">username:</label>
+        <input type="text" name="username" id="username" required maxlength="20" size="50" value="batman"
+        readonly disabled>
+        <br><br>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password" required placeholder="your password was ur pet name" size="50px">
+        <br><br>
+        <input type="radio" name="gender" value="Male" checked>Male
+        <input type="radio" name="gender" value="Female">Female
+        <br><br>
+        <input type="checkbox" name="agree" checked>Agree to T&Cs
+        <input type="submit" value="Login">
+        
+
+      </fieldset>
+    </form>
+</body>
+</html>

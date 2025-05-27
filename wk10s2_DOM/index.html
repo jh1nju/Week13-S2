@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript with DOM</title>
+    <script>
+        //write javascript codes here
+        //--------------
+        //function: a block of code to perform a specific task
+        //function FunctionName (parameters/inputs) {
+        //  Isatement(s)
+        //  return something -- optional }
+        // function displayHi(){
+        //     alert("Hi");
+        // }
+        // displayHi(); //calling the function
+        
+        // Add() function
+        function Add(){
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let sum = n1 + n2;
+            //alert(sum); // display the result on an alert
+            document.getElementById("result1").innerText="The sum is "+sum;
+            
+            document.getElementById("result2").innerHTML="<b> The sum is "+sum+ "</b>";
+        }
+            //function to sub()
+        function Sub(){
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let sub = n1 - n2;
+            //alert(sub); // display the result on an alert
+            document.getElementById("result1").innerText="The subtraction is "+sub;
+
+        }
+
+        //--------------------------- convert
+        function Convert(){
+            //alert("Convert");
+            let c = document.getElementById("temp").value;
+            //farenheit = (celcius * 9/5) + 32
+            let f= (c*9/5)+32;
+            document.getElementById("tempResult").innerHTML="<i> Farenheit (F): " +f+ "</i>";
+        }
+    </script>
+</head>
+<body>
+    <h1>Document Object Model (DOM)</h1>
+    <h2>How to use JavaScript to get, change, add, delete HTML elements or CSS, or attributes.</h2>
+
+    <label for = "num1">Number 1</label>
+    <input type ="text" id="num1"> <br>
+    <br>
+    <label for = "num2">Number 2</label>
+    <input type ="text" id="num2"> <br>
+    <br>
+    <!--button to call the function Add()-->
+    <button onclick="Add()">Add</button>
+
+    <!--function to subtract sub()-->
+    <!--button to call the function Sub()-->
+    <button onclick="Sub()">Subtract</button> <br>
+    
+    <!--display the result-->
+    <label id="result1"></label><br>
+    <label id="result2"></label>
+
+    <br><hr>
+    <!-------------------------------->
+    <label for="temp">Enter temperature in celcius</label>
+    <input type="number" id="temp"> <br><br>
+    <button onclick="Convert()">convert to farenheit</button>
+    <h3 id="tempResult"></h3>
+
+    
+
+</body>
+</html>

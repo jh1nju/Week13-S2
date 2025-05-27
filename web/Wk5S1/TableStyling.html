@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:75%;
+            border:2px solid blue;
+            text-align: center;
+            /*to remove double borders*/
+            border-collapse: collapse;
+        }
+        /*selecting all th and td*/
+        th, td{
+            border: 2px solid red;
+            /*border-bottom: 2px solid red; /*keep only horizontal borders*/
+            height: 50px;
+            vertical-align: bottom;
+        }
+        
+        tr:nth-child(even){ /*selecting even rows*/ /*you can specify even or odd*/ 
+            background-color: gray;
+        }
+        tr:hover{
+            background-color: gold;
+        }
+
+    </style>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th>StudentID</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>546</td>
+            <td>Kayle</td>
+            <td>83</td>
+        </tr>
+        <tr>
+            <td>547</td>
+            <td>Mike</td>
+            <td>47</td>
+        </tr>
+        <tr>
+            <td>1234</td>
+            <td>John Smith</td>
+            <td>87</td>
+        </tr>
+        <tr>
+            <td>5588</td>
+            <td>Terry James</td>
+            <td>67</td>
+        </tr>
+    </table>
+</body>
+</html>

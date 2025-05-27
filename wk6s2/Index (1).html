@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="StyleSheet" href="./StyleSheet.css" />
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <h2>HTML form is a fundamental part of web devalopment</h2>
+    <h2>
+      HTML form allows to imput data that can be sent to a server for processing
+    </h2>
+    <!-- ---------------------------------------------------- -->
+    <!-- Form element will be used to create a form -->
+    <form>
+      <!-- The <input> element is the most used form element -->
+      <!-- FirstName -->
+      <!-- A lable for the imput field, 
+           where 'for'attribute should match the 'id'of the imput element (bind them together) -->
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="firstname" />
+      <br /><br />
+      <!-- LastName -->
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lastname" />
+      <br /><br />
+      <!-- Password -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <br /><br />
+    </form>
+    <table>
+      <!-- Email -->
+      <tr>
+        <!-- this column is for the label -->
+        <td>
+          <label for="email">Email:</label>
+        </td>
+        <!-- This column is for the input -->
+        <td>
+          <input type="email" id="email" name="email" />
+        </td>
+      </tr>
+      <tr>
+        <!-- Age -->
+        <td>
+          <label for="age">Age:</label>
+        </td>
+        <td>
+          <input type="number" id="age" name="age" min="1" max="110" />
+        </td>
+      </tr>
+      <tr>
+        <!-- Height -->
+        <td>
+          <label for="height">Height:</label>
+        </td>
+        <td>
+          <input
+            type="range"
+            id="height"
+            name="height"
+            min="50"
+            max="250"
+            oninput="UpdateHeightValue()"
+          />
+          <p><span id="heightValue"></span>cm</p>
+        </td>
+      </tr>
+      <tr>
+        <!-- Phone Number -->
+        <td>
+          <label for="phoneNumber">Phone Number:</label>
+        </td>
+        <td>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="(64+) 02-123-4567"
+            pattern="([0-9]{2})-[0-9]{3}-[0-9]{4}"
+          />
+        </td>
+      </tr>
+      <tr>
+        <!-- Gender -->
+        <!-- Radio button allows the user to select only one option from a group of choices -->
+        <td>
+          <label for="gender">Gender:</label>
+        </td>
+        <td>
+          <input type="radio" id="gender1" name="gender" value="Male" />
+          <lebel for="gender1">Male</lebel>
+          <input type="radio" id="gender2" name="gender" value="Female" />
+          <lebel for="gender2">Female</lebel>
+          <input type="radio" id="gender3" name="gender" value="Other" />
+          <lebel for="gender3">Other</lebel>
+        </td>
+      </tr>
+      <tr>
+        <!-- Hobbies -->
+        <td>
+          <label for="hobbies">Hobbies:</label>
+        </td>
+        <td>
+          <input type="checkbox" id="hobbies1" name="Football" />
+          <label for="hobbies1">Football</label>
+          <br />
+          <input type="checkbox" id="hobbies2" name="Yoga" />
+          <label for="hobbies2">Yoga</label>
+          <br />
+          <input type="checkbox" id="hobbies3" name="Swimming" />
+          <label for="hobbies3">Swimming</label>
+          <br />
+          <input type="checkbox" id="hobbies4" name="Reading" />
+          <label for="hobbies4">Reading</label>
+          <br />
+          <input type="checkbox" id="hobbies5" name="Sleeping" />
+          <label for="hobbies5">Sleeping</label>
+        </td>
+      </tr>
+      <tr>
+        <!-- country -->
+        <td>
+          <label for="country">Country:</label>
+        </td>
+        <td>
+          <select id="country" name="county">
+            <option value="">--Select a counrty--</option>
+            <option value="NZ">NewZealand</option>
+            <option value="AU">Australia</option>
+            <option value="USA">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="IN">India</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <!-- Date -->
+        <td>
+          <label for="date">Date:</label>
+        </td>
+        <td>
+          <input type="date" id="date" name="date" />
+        </td>
+      </tr>
+    </table>
+    <script>
+      function UpdateHeightValue() {
+        height = document.getElementById("height").value;
+        document.getElementById("heightValue").textContent = height;
+      }
+    </script>
+  </body>
+</html>

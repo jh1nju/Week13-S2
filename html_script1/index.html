@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a heading</h1>
+
+    <script>
+        document.write("This is a text");
+    </script>
+
+    <script>
+        name = "John Smith";
+        age = 18;
+
+        //-------------------------
+        //JavaScript display options
+        //we can use "document.write()", "window.alert()", "console.log()", "innerHTML"
+
+        //we can use "<br>" to make a new line
+        document.write("Kia ora, welcome to JavaScript <br>");
+        document.write("My name is John <br>");
+        document.write("This is:" +name + "<br>");
+        document.write("My age is: "+age +"<br>");
+
+        console.log("This is a log info");
+        console.log(name);
+
+        //window.alert("Hi this is a message");
+        //alert("Hi " +name);
+
+        //-----------------------------
+        //operators
+        //Arithmetic operators
+        // + - * / %
+
+        var x = 10;
+        var y = 5;
+        var sum = x + y;
+        var difference = x - y;
+        var divide = x / y;
+        var product = x * y;
+        var remainder = x % y;
+
+        document.write(x + " + " + y + " = " + sum + "<br>");
+        document.write(x + " - " + y + " = " + difference + "<br>");
+        document.write(x + " / " + y + " = " + divide + "<br>");
+        document.write(x + " * " + y + " = " + product + "<br>");
+        document.write(x + " % " + y + " = " + remainder + "<br>");
+
+        //add 5 to x and store the new value in x again
+        x += 5; // x = x + 5;
+        x -= 5; // x = x - 5;
+        x *= 5; // x = x * 5;
+        x /= 5; // x = x / 5;
+        x %= 5; // x = x % 5;
+
+        //-----------------------
+        //comparison operators ( return either true or false)
+        // ==, !=, >, >=, <, <=
+        x = 5;
+        y = 5;
+        document.write(x + " Equal to " + y + " is " + (x==y) +"<br>");
+        document.write(x + " Not equal to " + y + " is " + (x!=y) +"<br>");
+        document.write(x + " Equal value and equal type " + y + " is " + (x==y) +"<br>");
+        
+        document.write(x + " greater than " + y + " is " + (x>y) +"<br>");
+        document.write(x + " greater than or equal " + y + " is " + (x>=y) +"<br>");
+
+        document.write(x + " less than " + y + " is " + (x<y) +"<br>");
+        document.write(x + " less than or equal " + y + " is " + (x<=y) +"<br>");
+
+        //---------------------------
+        //logical operators (AND, OR, NOT)
+        //AND: &&
+        //OR: ||
+        //NOT: !
+
+        var a = 10;
+        var b = 20;
+        var c = 15;
+
+        //           false    false
+        var result = (a>b) && (a>c);
+
+        //           false    true
+        var result2 = (a>b) || (c<b); // true
+
+        //            false     not false
+        var result3 = (a>b) && (!(a>c)); //false
+
+        //----------------------
+        //we can use 'prompt' to get an input from the user
+        var studentName = prompt("Enter your name");
+        document.write("Welcome " + studentName + "<br>")
+        
+        //ask for 2 numbers and display sum
+        //use Number() to convert string to number
+        var num1 = Number(prompt("Enter number 1: "));
+        var num2 = Number(prompt("Enter number 2: "));
+        var res = num1 + num2;
+        document.write("The sum is " + res + "<br>");
+        document.write("Subtraction is " + (num1 - num2) + "<br>");
+
+        //--------------------------
+        //condition statements
+        // if(condition/s){statement/s}
+        //if(condition/s){statement/s} else {statement/s}
+        var number = Number(prompt("Enter a number"));
+
+        //even number has a zero remainder if divided by 2
+        if (number % 2 == 0){
+            document.write("The nunber os even <br>");
+        }
+        else{
+            document.write("The number is odd <br>");
+        }
+    </script>
+</body>
+</html>

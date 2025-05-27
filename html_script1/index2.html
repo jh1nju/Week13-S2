@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF conditions and loops</title>
+</head>
+<body>
+    <script>
+        //loops - for / while
+        
+        //---------------------- for loop --------------------
+        // for (initialization-start point; stop-condition; update/increment){}
+        
+        //write a for loop to print numbers from 1 to 10
+
+        for (var i=1; i<=10; i++){
+            document.write(i+"<br>");
+        }
+        document.write("value of i after the loop (using var) " +i+"<br>");
+
+        //write a for loop to print numbers from 10 to 1
+
+        for (var x=10; x>0; x--){
+            document.write(x+"<br>");
+        }
+        document.write("value of i after the loop (using var) " +x+"<br>");
+
+        //print all even numbers from 0 - 20
+
+        for (var i=0; i<=20; i++){
+            if(i%2==0){
+                document.write(i+"<br>");
+            }   
+        }
+        document.write("value of i after the loop (using var) " +i+"<br>");
+
+        var x = 1;
+        var x = 2; //allows re-declaration in the same scope
+        
+        let y = 1;
+        //let y = 2; // not allowed becuz 'y' is already declared
+
+        //---------------------- while loops ----------------------
+        //print numbers from 1 - 10
+        let a = 1;
+        while (a<=10){
+            document.write(a+"<br>");
+            a++;
+        }
+
+        //print numbers from 30-15
+        let z=30;
+        while(z>=15){
+            document.write(z+"<br>");
+            z--;
+        }
+
+        //------------------ Array -------------------
+        // array is a special variable which can hold more than one value
+        let numebrs = [10, 20, 30, 40, 50, 60, 70];
+        let arr = new Array(3);// create an array with empty slots\
+
+        let colors = ["red", "green", "blue", "yellow" ,"white"];
+        document.write("the color at index 2 is: "+colors[2]+"<br>");
+        document.write("the color at index 4 is: "+colors[4]+"<br>");
+        document.write("the color at index 5 is: "+colors[5]+"<br>");
+
+        //update value of array
+        document.write(colors+"<br>");
+        colors[1] = "black";
+        document.write(colors+"<br>");
+
+        let s = colors.length; // returns the size of an array
+        document.write("there are "+s+" elements in this array<br>");
+
+        //add a new item to the array\
+        colors.push("pink");
+        colors.push("green");
+        document.write(colors+"<br>");
+
+        colors.shift(); // remove the first element and shift all other elemnts to a lower index
+        document.write(colors+"<br>");
+
+        // add a new element at the start of the array
+        colors.unshift("light green");
+        document.write(colors+"<br>");
+        document.write("------------ ----------------<br>");
+
+        //splice()
+        // splice allows to add/remove elements at a specific index
+        // to remove one or more elements starting at a certain index
+        colors.splice(1, 2); // removes 2 elements starting from index 1
+        document.write(colors+"<br>");
+        document.write("----------------------------<br>");
+
+        //sorting
+        //
+        colors.sort(); // sort alphabetical and ascending order
+        document.write(colors+"<br>");
+
+        //reverse
+        colors.reverse(); // reverse the order of the elements
+        document.write(colors+"<br>");
+        
+        
+        
+    </script>
+</body>
+</html>

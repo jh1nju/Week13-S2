@@ -1,0 +1,96 @@
+/* universal selector (*) - selects all elements on the page */
+* {
+    margin: 10px;
+}
+
+/* Type (tag) selector - selects all elements of a specific (tag name) */
+div {
+    border: 2px solid;
+}
+
+/* class selector (.) - selects all elements with a specific class name */
+.textRed {
+    color: red;
+}
+
+/* ID selector (#) - selects a single element with unique ID. ID should be unique per page (and per element) */
+#header {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Group selector (,) - selects multiple elements at once */
+h1,
+h2,
+#header,
+.textRed {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ******************************************************* */
+
+/* descendant selector ( ) ->space - 
+selects elements inside another element (nested elements). target all matching elements inside the parent*/
+div p {
+    background-color: gold;
+}
+
+/* ******************************************************** */
+
+/* Child selector (>) - selects only direct children of an element. 
+unlike the descendant selector, it ignores deeper nested elements. */
+div>p {
+    color: green;
+}
+
+/* ******************************************************** */
+/* Adjacent silbing selector (+) - selects the immidiate next silbing */
+/* selects the first 'p' element placed immidiately after 'h1' element */
+h1+p {
+    text-decoration: underline;
+}
+
+/* ******************************************************** */
+/* General sibling selector (~) - selects all siblings come after a specific element */
+/* selects all elements come after another element, regardless of the order */
+h1~p {
+    text-transform: uppercase;
+}
+
+/* ******************************************************** */
+/* pseudo-class selectors (:) */
+a:hover {
+    color: red;
+    font-size: larger;
+}
+
+/* select and style every 'p' element that is first child of the parent */
+p:first-child {
+    font-style: italic;
+}
+
+li:last-child {
+    color: red;
+}
+
+li:nth-child(odd) {
+    color: peru;
+}
+
+li:nth-child(even) {
+    color: green;
+}
+
+/* select first letter */
+P::first-letter {}
+
+/* selects all paras excludes the ones has 'textRed' class*/
+p:not(.textRed) {}
+
+li:not(:first-child) {
+    font-weight: bolder;
+}
+
+li:hover {
+    background-color: blueviolet;
+}

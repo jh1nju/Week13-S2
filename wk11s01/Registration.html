@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+
+    <style>
+        table {
+            width: 70%;
+            border: 1px solid blue;
+            border-collapse: collapse;
+            /*adjacent table cell borders are collapsed in to single border*/
+        }
+
+        th,
+        td {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>REgistration Form</h1>
+    <h2>HTML Form Validation using JavaScript</h2>
+    <form onsubmit="return ValidateForm()">
+        <table>
+            <!--Row 1 : -->
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Error Message</th>
+            </tr>
+            <!--Row 2 : Name(text)-->
+            <tr>
+                <td><label for="name">Full Name:</label></td>
+                <td><input type="text" id="name" name="fullname" required></td>
+                <!--use "span" to show any potential error-->
+                <td><span class="error" id="nameError"></span></td>
+            </tr>
+            <!-- Row 3 : Email(email)-->
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+                <td><span class="error" id="emailError"></span></td>
+            </tr>
+            <!-- Row 4 : password(password)-->
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+                <td><span class="error" id="passwordError"></span></td>
+            </tr>
+            <!-- Row 5 : Confirm password(password)-->
+            <tr>
+                <td><label for="cpassword">Confirm Password</label></td>
+                <td><input type="password" id="cpassword" name="cpassword" required></td>
+                <td><span class="error" id="cpasswordError"></span></td>
+            </tr>
+            <!-- Row 6 : age(number)-->
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" id="age" name="age" required min="1" max="120"></td>
+                <td><span class="error" id="ageError"></span></td>
+            </tr>
+            <!-- Row 7 : gender(radio dutton)-->
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">Male
+                    <input type="radio" id="female" name="gender" value="female">Female
+                    <input type="radio" id="other" name="gender" value="other">Other
+                </td>
+                <td><span class="error" id="genderError"></span></td>
+            </tr>
+            <!-- Row 8 : hobbies(checkbox)-->
+            <tr>
+                <td><label for="hobbies">Hobbies</label></td>
+                <td>
+                    <input type="checkbox" id="hobby1" name="hoppy1" value="Sports">Sports
+                    <input type="checkbox" id="hobby2" name="hoppy2" value="Reading">Reading
+                    <input type="checkbox" id="hobby3" name="hoppy3" value="Coding">Coding
+                </td>
+                <td><span class="error" id="hobbyError"></span></td>
+            </tr>
+            <!-- Row 9 : country(dropdown box)-->
+            <tr>
+                <td><label for="Country">Country</label></td>
+                <td>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="Canada">Canada</option>
+                        <option value="USA">United States</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+                <td><span class="error" id="countryError"></span></td>
+            </tr>
+            <!-- Row 10 : phone(tel)-->
+            <tr>
+                <td><label for="phone">Phone:</label></td>
+                <td>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{2}-[0-9]{8}"
+                    placeholder="00-12345678">
+                </td>
+                <td><span class="error" id="phoneError"></span></td>
+            </tr>
+            <!-- Row 11 : comments(text)-->
+            <tr>
+                <td><label for="comments">Comments:</label></td>
+                <td>
+                    <textarea id="comments" name="comments" require></textarea>
+                </td>
+                <td><span class="error" id="commentsError"></span></td>
+            </tr>
+            <!-- Row 12 : submit button(button)-->
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="/wk11s01/formValidation.js"></script>  
+</body>
+
+</html>

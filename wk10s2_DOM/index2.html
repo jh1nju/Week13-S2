@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS with DOM</title>
+    <script>
+        function ChangeColor(){
+            //document.getElementById("id").style.property = new value;
+            //document.getElementById("headDemo").style.color = "blue";
+
+            //document.getElementById("headDemo").style.color = document.getElementById("hcolor").value;
+
+            let usercolor = document.getElementById("hcolor").value;
+            document.getElementById("headDemo").style.color = usercolor;
+
+            // let usercolor2 = document.getElementById("hcolor2").value;
+            // document.getElementById("headDemo").style.color = usercolor2;
+
+        
+        }
+        //-----------------------------
+        var s = 16;
+        function ChangeFontSize(){
+                document.getElementById("ptext").style.fontSize="30px";
+
+                var parag = document.getElementsByClassName("pclass")
+                // parag[0].style.fontSize="30px";
+                // parag[1].style.fontSize="30px";
+                s = s + 4;
+                document.getElementById("ptext").style.fontSize = s + "px";
+        }
+
+        //------------------------------
+        function ChangeStyles(){
+            // document.getElementById("h2Demo").style.color="white";
+            // document.getElementById("h2Demo").style.fontSize="30px";
+
+            let element = document.getElementById("h2Demo");
+            element.style.color="white";
+            element.style.fontSize="30px";
+            element.style.backgroundColor="black";
+            element.style.fontFamily="Helvetica";
+            element.style.textTransform = "uppsercase";
+            element.style.fontStyle="italic";
+
+        //--------------------------------    
+        }
+
+        function ChangeText(){
+            document.getElementById("ctext").innerText="This is a new content";
+        }
+        //--------------------------------
+
+        function UpdateText(){
+            document.getElementById("utext").innerText=Date();
+        }
+
+    </script>
+</head>
+<body>
+    <h1 id="headDemo">Document Object Model (DOM) with JavaScript</h1>
+    <h2>With DOM + JavaScript, we can get, add, remove, update HTML elements, their styles or attributes.</h2>
+    <label for="hcolor">Enter color name: </label>
+    <input type="text" id="hcolor"><br><br>
+    <!-- <input type="color" id="hcolor2"><br><br> -->
+    <button onclick="ChangeColor()">Change H1 element color</button>
+    <br>
+
+    <!------------------------------------------->
+    <p id="ptext"> weferkne eiruhfe ibe eieuhfeiueieiug ei ei eiu heiu eih woef jwpe wooh</p>
+    <p class="pclass">rgtrhrrrrrrrrrrr eweoihwo wofi hifwhfiwb</p>
+    <button onclick="ChangeFontSize()">Change font size for paragraph</button>
+    <br>
+
+    <!-- ------------------------------------ -->
+     <p id="h2Demo">h2 demo h2 demo h2 demo h2 demo h2 demo h2 demo h2 demo h2 demo h2 demo h2 demo </p>
+     <button onclick ="ChangeStyles()">Change Style</button>
+    <br>
+
+     <!-- ---------------------------------- -->
+    <h1 id="ctext"> CHANGE CONTENTS OF AN ELEMENT </h1>
+    <button onlicik="ChangeText()">Change Content</button>
+    
+    <h2 id="utext" onclick="UpdateText()">Click On Me!</h2>
+
+</body>
+</html>

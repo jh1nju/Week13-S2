@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background RGB</title>
+</head>
+<script>
+    function ChangeBackgroundRGB(){
+        //document.body.style.backgroundColor = "rgb(2,210,155)";
+        let R = Math.floor(Math.random()*225); //0-225
+        let G = Math.floor(Math.random()*225); //0-225
+        let B = Math.floor(Math.random()*225); //0-225
+        document.body.style.backgroundColor = 
+        "rgb(" + R + "," + G + "," + B + ")";
+    }
+</script>
+<body>
+    <button onclick="ChangeBackgroundRGB()">Change Background Color</button>
+</body>
+</html>

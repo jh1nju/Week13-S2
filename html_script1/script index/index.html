@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text = "JavaScript is one of the most popular programming language for web";
+        document.write(text + "<br>");
+
+        //return length of the string
+        document.write(text.length + " characters <br>");
+
+        //variableName[index] .. returns a character at that index
+
+        //another way to get a character
+        document.write("character at index 5 is (using charAt): " + text.charAt(5) + "<br>");
+
+        //at: supports the use of negative index, while 'charAt' does not.
+        document.write("character at index 5 is (using at): " + text.at(5) + "<br>");
+
+        document.write("character at index -1 is (using at): " + text.at(-1) + "<br>");
+
+        //extract a part of a string
+        // slice (start, end) == "end is not included"
+        //substring(start, end)
+        //substr (start, length)
+
+        //slice -- it supports negative indices (count from the end of the string)
+        //if end is omitted, it slice to the end of the string
+        document.write("Slice: " + text.slice(0,4) + "<br>");
+
+        //no value for "end"
+        document.write("Slice: " + text.slice(4) + "<br>");
+        document.write("slice: " + text.slice(-5, -1) + "<br>");
+        
+        document.write("<br>-------------------------------------------------------------------- <br>");
+    
+        //substring: extract characters between start and end (excluding end). It does not support negative indices.
+        document.write("Substring:(0,4) " + text.substring(0,4) + "<br>");
+        document.write("Substring:(4) " + text.substring(4) + "<br>");
+
+        // if start > end, it swaps the two values
+        document.write("Substring:(65, 1) " + text.substring(65, 1) + "<br>");
+
+        //substr (start, length)
+        document.write("Substr:(0, 4) " + text.substr(0, 4) + "<br>");
+
+        // it supports negative start value (count from the end)
+        document.write("Substr:(-5, 4) " + text.substr(-5, 4) + "<br>");
+
+        document.write("<br>-------------------------------------------------------------------- <br>");
+
+        //replace a string
+        // it will find the word "web" and replace it with "website"
+        document.write(text + "<br>");
+        text = text.replace("web", "website");
+        document.write(text + "<br>");
+        
+        text = text.replaceAll("the", "---"); // it is case sensitive
+        document.write(text + "<br>")
+
+        document.write("<br>-------------------------------------------------------------------- <br>");
+
+        //uppercase and lowercase
+        document.write("Uppercase: " + text.toUpperCase()+ "<br>");
+        document.write("Lowercase: " + text.toLowerCase()+ "<br>");
+
+        document.write("<br>-------------------------------------------------------------------- <br>");
+
+        //split: which is used to divide a string into an array of substring based on a specific delimiter (separator)
+        let results = text.split(" "); // divide text based on the spaces between words
+        document.write(results + "<br>");
+
+        document.write("<br>-------------------------------------------------------------------- <br>");
+
+        //search returns the position of the first occurence of a string in a string. if the string does not exist, it ill return -1
+        document.write("Search for word - 'most' :" + text.search("most") + "<br>");
+        document.write(results + "<br>");
+
+        document.write("<br>-------------------------------------------------------------------- <br>");
+
+        //math functions
+        document.write("------------- Math Functions --------------- <br>");
+
+        document.write("PI = " + Math.PI);
+        document.write("Sqrt(16) = " + Math.sqrt(16) +"<br>"); //4
+        document.write("Power(16) = " + Math.pow(2, 3) +"<br>"); // 2 * 2 * 2 = 8
+
+        //numbers to integers
+        // floor: returns x rounded down to its nearest integer
+        document.write("floor (4.6) = " + Math.floor(4.6)+ "<br>");
+
+        //ceil : returns x rounded up to it nearest integer
+        document.write("ceil (4.5) = " + Math.ceil(4.5) + "<br>");
+
+        // round : returns x rounded to its nearest integer
+        document.write("round (4.6) = " + Math.round(4.6) + "<br>");
+
+        // trunc : returns the integer part of the text
+        document.write("trunc (4.6) = " + Math.trunc(4.6) + "<br>");
+
+        //math.abs() : absolute (positive) value of x
+        document.write("abs (-4, 4) = " + Math.abs(-4.4) + "<br>");
+
+        //Max
+        document.write("Max (0, 150, 30, 20, -8, -200) is : " + Math.max(0, 150, 30, 20, -8, -200) + "<br>");
+        //Min
+        document.write("Min (0, 150, 30, 20, -8, -200) is : " + Math.min(0, 150, 30, 20, -8, -200) + "<br>");
+
+        //math.random() : returns a random number between 0 and 1(exclusive)
+        document.write("Random number between 0 and up to 1: " + Math.random() + "<br>");
+
+        //a random number between 0 - 10
+        document.write("Random number between 0 and up to 10: " + Math.floor(Math.random()*11) + "<br>");
+
+        //a random number between min and max values (both included)
+        //Math.floor(Math.random()* (max - min + 1) + min) + "<br>");
+        document.write("Random number between 5 - 10 : " + Math.floor(Math.random()* ( 10 - 5 +1) + 5) + "<br>");
+
+
+    </script>
+
+</body>
+</html>

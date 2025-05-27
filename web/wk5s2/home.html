@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+
+    <style>
+        #sdiv{
+            position: static;
+            border: 1px solid;
+            
+        }
+        #rdiv{
+            position:relative;
+            top: 20px;
+            left: 30px;
+            border: 1px Solid red;
+        }
+        #container{
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+            border:1px solid;
+        }
+        #adiv{
+            position: absolute;
+            top:10px;
+            left:20px;
+            background: lightgreen;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS poitions</h1>
+    <p>the position property determines how an element is positioned in a document.</p>
+    <p>there are five values: Static(default), relative, absolute, fixed, sticky</p>
+
+    <div id="sdiv"> This is a static div</div>
+
+    <div id="rdiv">This is a relative div, which has moved 20px down and 30px right</div>
+
+    <div id="container">
+        <div class="adiv">this is absolutely positioned</div>
+    </div>
+
+
+
+</body>
+</html>

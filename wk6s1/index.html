@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+
+    
+    <style>
+        h1{
+            /* changing 'h1' and 'h2' from block elements to inline elements */
+            display: inline;
+            border: 1px solid;
+            height: 200px; /* Changing the height or width is useless for inline elements */
+        }
+        h2{
+            display: inline-block;
+            border: 1px solid;
+            height: 200px;
+        }
+        a{
+            /* changing 'a' from inline elements to block elements */
+            display: block;
+            border: 1px solid;
+            height: 50px;
+        }
+        p{
+            /*this will hide the element. it ALSO REMOVES THE ALLOCATED SPACE FOR THE ELEMENT*/
+
+            /*display: none;*/
+
+            /*hide the element, but it does not remove the allocated space for the element*/
+
+            /*visibility: hidden;*/
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Display property is CSS</h1>
+    <h2>There are different valyes fr display: block, inline, inline-block, and none.</h2>
+    <p>This is a paragraph</p>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <p>Paragraph after links</p>
+</body>
+</html>

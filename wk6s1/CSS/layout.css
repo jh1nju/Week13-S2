@@ -1,0 +1,94 @@
+.container{
+    border: 1px solid blue;
+    padding: 10px;
+    background-color: chartreuse;
+
+    /*to enable the grid layout, we need to change the display value to grid*/
+    /*a grid is a collection of columns and rows*/
+    display: grid;
+
+    /*specify numbers of columns and their width*/
+    /*we want to have 3 columns*/
+
+    /*grid-template-columns: 100px 300px 200px;*/
+    /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+
+    /*'auto' the width of each column is determined by the content inside the column
+    (adjust the column width to fit its content)*/
+    /*grid-template-columns: auto auto auto;*/
+    
+    /*fr: fraction*/
+    /*grid-template-columns: 1fr 2fr 3fr;*/
+
+    /**/
+    grid-template-columns: repeat(3, 1fr);
+
+    /*to specify the height of the rows*/
+    /*grid-template-rows: 200px 500px;*/
+
+    /*add gaps*/
+    /*column-gap: 20px;
+    row-gap: 20px;*/
+    /*gap: 20px;*/
+
+    grid-template-areas:
+    'menu menu menu'
+    'header header header'
+    'main main right'
+    'footer footer right';
+
+}
+#header{
+    grid-area: header;
+}
+#menu{
+    grid-area: menu;
+}
+#main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+#right{
+    grid-area: right;
+}
+
+/*change the style for all inner divs*/
+.item{
+    border: 2px solid brown;
+    background-color: darkgoldenrod;
+    padding: 15px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Media query */
+/* if the screen is 600px or less (small devices) (i.e. phone) */
+@media screen and (max-width: 600px) {
+    body{
+        background-color: red;
+        font-size: xx-large;
+    }
+    .container{
+        grid-template-areas:
+        'menu menu menu'
+        'header header header'
+        'main main main'
+        'right right right'
+        'footer footer footer   ';
+    }
+}
+
+/* this apply to screen that have width between 601 to 900px */
+@media screen and (max-width: 900px) and (min-width: 601px){
+    body{
+        background-color: green;
+    }
+}
+/* for screen that have width more than 901px (large devices) */
+@media screen and (min-width: 901px) {
+    body{
+        background-color: blue;
+    }
+}
