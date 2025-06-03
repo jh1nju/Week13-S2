@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>JavaScript Examples</title>
+
+    <style>
+        body {
+            font-size: larger;
+        }
+
+        #articleResult {
+            width: 90%;
+            border-style: solid;
+            border-width: thin;
+            padding: 10px;
+        }
+    </style>
+
+    <script src="./Style/scripts.js"> </script> <!--linking js script file-->
+
+</head>
+
+<body>
+
+    <h1>Calculator</h1>
+
+    <div id="articleResult">
+        <fieldset>
+            <legend>Calculate vowels:</legend>
+            <label for="vowels">Enter a text/sentnece:</label>
+            <input type="text" id="vowels" name="vowels" size="70"><br><br>
+            <input type="button" value="Calculate vowels" onclick="CalcVowels();"></button>
+            <br /><br />Answer<br />
+            <p id="VowelsResult"></p>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>calculate the volume of a sphere:</legend>
+            <label for="Radius">Radius:</label>
+            <input type="text" id="Radius" name="Radius"><br><br>
+            <input type="button" value="Calculate the volume" onclick="CalcVolume();"></button>
+            <br /><br />Answer<br />
+            <p id="VolumeResult"></p>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>Show Grade based on a mark:</legend>
+            <label for="Mark">Mark:</label>
+            <input type="text" id="Mark" name="Mark"><br><br>
+            <input type="button" value="Show Grade" onclick="ShowGrade();"></button>
+            <br /><br />Answer<br />
+            <p id="GradeResult"></p>
+        </fieldset>
+    </div>
+
+</body>
+
+</html>

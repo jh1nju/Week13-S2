@@ -1,0 +1,121 @@
+
+.custom-navbar {
+  height: 65px;
+  background-color: #3d574c;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.custom-navbar .nav-link {
+  color: white;
+  margin-right: 20px;
+}
+
+.custom-navbar .nav-item.active {
+  font-weight: bold;
+}
+
+.logo img {
+
+  width: 65px;
+  height: 65px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navbar-toggler {
+  order: -1;
+  margin-right: auto;
+  margin-top: -15px;
+}
+
+/* ---------------------mobile responsive------------------- */
+
+@media (max-width: 992px) {
+
+  /*-- made navbar responsive for smaller screens--*/
+  .navbar-toggler {
+    order: -1;
+    margin-right: auto;
+    margin-top: -15px;
+    /*-- changed the order of the navbar toggler and the logo. because in default toggler is in right in this case--*/
+  }
+
+  .navbar-toggler.logo {
+    justify-content: end;
+    order: 1;
+    margin-top: -10x;
+    /*-- made the logo be in a fixed position when toggler is triggered--*/
+    position: relative;
+  }
+
+  .custom-navbar .nav-link {
+    color: white;
+    background-color: rgba(61, 87, 76, 0.5);
+    /*--set the bg color opacity to 50% while keeping the text color intact --*/
+  }
+
+  .carousel-item img {
+    height: 280px;
+  }
+
+  .carousel-indicators button {
+    display: none;
+  }
+}
+
+/* --------------------carousel styles----------------------- */
+
+.carousel-item img {
+  object-fit: cover;
+  height: 700px;
+}
+
+/* ------------------------headings styles-------------------- */
+
+.overlay-text {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  z-index: 10;
+}
+.btn{
+  width:190px;
+  height:auto;
+}
+
+/* ---------------------------------------------- */
+
+.bdy-section{
+  position: relative;
+  height:700px;
+  overflow: hidden;
+}
+
+.bdy-section img{
+  width: 100%;
+  max-height: 700px;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.container-grid{
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  font-size: large;
+}
+
+.container-grid .grid-left{
+  margin-left: 200px;
+}
+
+.container-grid .grid-right{
+  margin-left: 700px;
+  margin-right: 200px;
+  margin-top: 150px;
+
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>JavaScript Examples</title>
+
+    <style>
+        body {
+            font-size: larger;
+        }
+
+        #articleResult {
+            width: 90%;
+            border-style: solid;
+            border-width: thin;
+            padding: 10px;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+
+        function CheckPalindrome() {
+            alert("Check Palindrome");
+            const word = document.getElementById("palindrome").value.trim().toLowerCase();
+            const reversed = word.split('').reverse().join('');
+            const result = word === reversed ? `"${word}" is a palindrome.` : `"${word}" is not a palindrome.`;
+            document.getElementById("PalindromeResult").textContent = result;
+            // Write code here for calculate the vowels in a string 
+
+        }
+
+        function Sorting() {
+            alert("Sorting comma-separated numbers");
+            const input = document.getElementById("numbers").value;
+            const numArray = input
+                .split(',')
+                .map(n => parseFloat(n.trim()))
+                .filter(n => !isNaN(n));
+
+            if (numArray.length < 2) {
+                document.getElementById("SortResult").textContent = "Please enter at least two valid numbers.";
+                return;
+            }
+
+            numArray.sort((a, b) => a - b);
+            document.getElementById("SortResult").textContent = "Sorted: " + numArray.reverse().join(", ");
+        }
+
+
+        function CalcArea() {
+            alert("Calculate Triangle Area");
+            const base = parseFloat(document.getElementById("base").value);
+            const height = parseFloat(document.getElementById("height").value);
+
+            if (isNaN(base) || isNaN(height) || base <= 0 || height <= 0) {
+                document.getElementById("AreaResult").textContent = "Please enter valid positive numbers for base and height.";
+                return;
+            }
+
+            const area = 0.5 * base * height;
+            document.getElementById("AreaResult").textContent = `Triangle Area: ${area.toFixed(2)}`;
+        }
+
+        function describeTemperature() {
+            const temp = parseFloat(document.getElementById("temperature").value);
+            let result = "";
+
+            if (temp >= 5 && temp <= 10) {
+                result = "Cold";
+            } else if (temp >= 11 && temp <= 16) {
+                result = "Mild";
+            } else if (temp >= 17 && temp <= 22) {
+                result = "Hot";
+            } else if (temp > 22) {
+                result = "Super-hot";
+            } else {
+                result = "Out of range";
+            }
+
+            document.getElementById("TempResult").textContent = result;
+        }
+
+        function countCharacter() {
+            const char = document.getElementById("char").value;
+            const text = document.getElementById("text").value;
+            let count = 0;
+
+            for (let i = 0; i < text.length; i++) {
+                if (text[i] === char) {
+                    count++;
+                }
+            }
+
+            document.getElementById("CharCountResult").textContent = `"${char}" appears ${count} time(s) in the text.`;
+        }
+
+        function calculateFactorial() {
+            const num = parseInt(document.getElementById("factorialInput").value);
+            if (num < 0) {
+                document.getElementById("FactorialResult").textContent = "Invalid input";
+                return;
+            }
+
+            let result = 1;
+            for (let i = 2; i <= num; i++) {
+                result *= i;
+            }
+
+            document.getElementById("FactorialResult").textContent =
+                `Factorial of ${num} is ${result}`;
+        }
+
+        function printPattern() {
+            const n = parseInt(document.getElementById("patternRange").value);
+            let output = "";
+
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= i; j++) {
+                    output += j + " ";
+                }
+                output += "\n";
+            }
+
+            document.getElementById("PatternResult").textContent = output;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Calculator</h1>
+
+    <div id="articleResult">
+        <fieldset>
+            <legend>Check palindrome :</legend>
+            <label for="palindrome">Enter a word:</label>
+            <input type="text" id="palindrome" name="palindrome" size="70"><br><br>
+            <input type="button" value="Check palindrome" onclick="CheckPalindrome();"></button>
+            <br /><br />Answer<br />
+            <p id="PalindromeResult"></p>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>Sorting comma-separated numbers</legend>
+            <label for="numbers">Numbers:</label>
+            <input type="text" id="numbers" name="numbers"><br><br>
+            <input type="button" value="Sort three numbers" onclick="Sorting();"></button>
+            <br /><br />Answer<br />
+            <p id="SortResult"></p>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>Calculate triangle area:</legend>
+            <label for="base">Base :</label>
+            <input type="text" id="base" name="base"><br><br>
+            <label for="height">Height :</label>
+            <input type="text" id="height" name="height"><br><br>
+            <input type="button" value="Calculate Area" onclick="CalcArea();"></button>
+            <br /><br />Answer<br />
+            <p id="AreaResult"></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="temperature">Enter temperature:</label>
+            <input type="number" id="temperature" oninput="describeTemperature()" />
+            <p id="TempResult"></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h2>3.5 Count Character Occurrences</h2>
+            <label for="char">Character:</label>
+            <input type="text" id="char" maxlength="1">
+            <br>
+            <label for="text">Text:</label>
+            <input type="text" id="text">
+            <br><br>
+            <button onclick="countCharacter()">Count</button>
+            <p id="CharCountResult"></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h2>3.6 Calculate Factorial</h2>
+            <label for="factorialInput">Enter a number:</label>
+            <input type="number" id="factorialInput" min="0">
+            <br><br>
+            <button onclick="calculateFactorial()">Calculate Factorial</button>
+            <p id="FactorialResult"></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="patternRange">Enter a number (range):</label>
+            <input type="number" id="patternRange" min="1">
+            <br><br>
+            <button onclick="printPattern()">Print Pattern</button>
+            <pre id="PatternResult" style="background: #f0f0f0; padding: 10px;"></pre>
+        </fieldset>
+    </div>
+
+</body>
+
+</html>

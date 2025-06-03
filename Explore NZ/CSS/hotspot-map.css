@@ -1,0 +1,27 @@
+.hotspot-image {
+    position: relative;
+    display: flex;
+}
+.hotspot-image img{
+    height:600px;
+    width:auto;
+    position: absolute;
+}
+
+/* common style for all hotspots */
+.hotspot {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 7, 7, 0.8);
+    /* #ffc107 @ 80% */
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform .2s ease-in;
+}
+
+.hotspot:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+}
